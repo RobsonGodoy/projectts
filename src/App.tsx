@@ -1,13 +1,21 @@
-import './App.css';
-import { Card } from './components/Card';
+import { Layout } from './components/Layout';
 function App() {
   return (
-    <div>
-      <h1>OUTNET</h1>
-      <Card  id={1}/>
-      <Card  id={2}/>
-      <Card  id={3}/>
-    </div>
+      <Layout>
+        <h1>Realize o Login</h1>
+        <label htmlFor='emailInput'>
+          Email
+        </label>
+        <input id="emailInput" />
+        <label htmlFor='passswordInput'>
+          Senha
+        </label>
+        <input id='passswordInput' type='password' />
+        <button>
+          Entrar
+        </button>
+      </Layout>
+
   );
 }
 
