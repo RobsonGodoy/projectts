@@ -1,0 +1,44 @@
+.Card {
+    background-color: black;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.Card h1{
+    color: rgb(35, 218, 35);
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.Card label {
+    font-weight: bold;
+    color: white;
+}
+.Card input {
+    border: solid 0.15rem rgb(13, 168, 13);
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
+    height: 1.4rem;
+}
+.buttonLogin {
+    background-color:rgb(35, 218, 35) ;
+    border-radius: 0.4rem;
+    width: 300px;
+    height: 30px;
+    margin: auto;
+    transition: 0.5s;
+}
+.buttonLogin:hover {
+    background-color: aqua;
+    transition: 0.5s;
+
+}
+@media only screen and (min-width: 768px) {
+    .Card input, label{
+        text-align: center;
+        justify-content: center;
+        width: 31.25rem;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+}
