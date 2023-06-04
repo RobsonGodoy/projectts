@@ -1,0 +1,21 @@
+.Account {
+    background-color: #a7cd2c;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+}
+.InfoAccess {
+    background-color: white;
+    height: 42.5vh;
+    border:0.25rem solid #50c8c6;
+    text-align: center;
+    padding-top: 1rem;
+}
+.InfoAccount{
+    background-color: white;
+    height: 42.5vh;
+    border:0.25rem solid #50c8c6;
+    text-align: center;
+    padding-top: 1rem;
+}

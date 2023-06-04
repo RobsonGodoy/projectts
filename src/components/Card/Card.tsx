@@ -1,28 +1,30 @@
+import { useState } from "react"
 import { login } from "../../services/login"
 import './Card.css'
 
-interface ICard {
-    email?: string,
-    password?: string
-}
 
+export const Card = () => {
+    const [email, setEmail] = useState <string>('')
 
-
-export const Card = ({email, password}: ICard) => {
     return(
-        <div className="Card">
-            <h1>Realize o Login</h1>
-            <label htmlFor='emailInput'>
-                Email:
-            </label>
-            <input id="emailInput">{email}</input>
-            <label htmlFor='passswordInput'>
-                Senha:
-            </label>
-            <input id='passswordInput' type='password'>{password}</input>
-            <button className="buttonLogin" onClick={login}>
-                Entrar
-            </button>
-        </div>     
+
+    
+                <div className="Card">
+                    {/*userData === null || userData === undefined?
+        <h1>Loading...</h1>:
+        <h1>Informações carregadas</h1>*/}
+                    <h1>Realize o Login</h1>
+                    <label htmlFor='emailInput'>
+                        Email:
+                    </label>
+                    <input id="emailInput" value={email} onChange={(event) => setEmail(event.target.value)}></input>
+                    <label htmlFor='passswordInput'>
+                        Senha:
+                    </label>
+                    <input id='passswordInput' type='password'></input>
+                    <button className="buttonLogin" onClick={() => login(email)}>
+                        Entrar
+                    </button>
+                </div>  
     )
 }
