@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import './Conta.css'
 import { api } from '../../../services/api'
 import { CardInfoAcces, CardInfoAccount } from '../../Card/CardInfo'
+import { AppContext } from '../../AppContext/AppContext'
 
 
 interface UserData {
@@ -16,6 +17,13 @@ interface UserData {
 
 export const Conta = () => {
     const [userData, setUserData] = useState <null | UserData>()
+    const { id } = useParams()
+    const navigate = useNavigate()
+
+    const {isLoggedIn} = useContext(AppContext)
+    console.log(`Retorno da página conta`, isLoggedIn)
+
+    !isLoggedIn && navigate('/')
 
     useEffect(() => {
         const getData = async () => {
@@ -24,10 +32,6 @@ export const Conta = () => {
         }
         getData()
     }, [])
-
-
-    const { id } = useParams()
-    const navigate = useNavigate()
 
     if(userData && id !== userData.id) {
         navigate('/')
