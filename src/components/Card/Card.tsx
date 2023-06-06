@@ -3,6 +3,7 @@ import login from "../../services/login";
 import "./Card.css";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../AppContext/AppContext";
+import { changeLocalStorage } from "../../services/storage";
 
 const Card = () => {
   const [email, setEmail] = useState<string>('');
@@ -17,6 +18,7 @@ const Card = () => {
     }
 
     setIsLoggedIn(true);
+    changeLocalStorage({login: true})
     navigate('/conta/1');
   };
 

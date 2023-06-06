@@ -15,4 +15,30 @@
 .header p {
     text-align: center;
     padding-bottom: 0.4rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.functions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.logout {
+    font-family: 'BrunoAce';
+    background-color: #50c8c6;
+    height: 3rem;
+    width: 6rem;
+    border-radius: .5rem;
+    font-weight: bold;
+    transition: 0.5s;
+}
+.logout:hover{
+    background-color: aqua;
+    transition: 0.5s;
+}
+@media only screen and (min-width: 768px) {
+    .functions{
+        margin: auto;
+        max-width: 800px;
+    }
 }
