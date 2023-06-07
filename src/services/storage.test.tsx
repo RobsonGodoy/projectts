@@ -1,9 +1,5 @@
 import { getAllLocalStorage } from "./storage"
 
-const dioBank = {
-    login: false
-}
-
 describe('storage', () => {
 
     it('Deve retornar o objeto no localStorage com a chave dioBank', () => {
