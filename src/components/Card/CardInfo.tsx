@@ -14,7 +14,7 @@ export const CardInfoAcces = () => {
     
     return (
         <div>
-                <p>Ultimo acesso: {`${actualData.getDay()}/${actualData.getMonth()}/${actualData.getFullYear()}  ${actualData.getHours()}:${actualData.getMinutes()}`}</p>
+                <p>Ultimo acesso: {`${actualData.getDate()}/${actualData.getMonth() + 1}/${actualData.getFullYear()}  ${actualData.getHours()}:${actualData.getMinutes()}`}</p>
         </div>
     )
 }

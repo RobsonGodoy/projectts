@@ -3,7 +3,7 @@ import Card from './components/Card/Card';
 import { Layout } from './components/Layout';
 import { Conta } from './components/Pages/Account/Conta';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { changeLocalStorage, createLocalStorage, getAllLocalStorage } from './services/storage';
+import { createLocalStorage, getAllLocalStorage } from './services/storage';
 
 
 

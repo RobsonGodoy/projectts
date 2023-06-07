@@ -7,11 +7,19 @@ import { changeLocalStorage } from "../../services/storage";
 
 const Card = () => {
   const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('')
   const { setIsLoggedIn } = useContext(AppContext);
   const navigate = useNavigate();
 
-  const validateUser = async (email: string) => {
-    const loggedIn = await login(email);
+  const validateUser = async (email: string, password: string) => {
+    const loggedIn = await login(email, password);
+    if (!email) {
+      return alert('Email inválido');
+    }
+  
+    if (!password) {
+      return alert('Senha inválida');
+    }
 
     if (!loggedIn) {
       return alert('Email inválido');
@@ -24,9 +32,6 @@ const Card = () => {
 
   return (
     <div className="Card">
-      {/*userData === null || userData === undefined?
-        <h1>Loading...</h1>:
-        <h1>Informações carregadas</h1>*/}
       <h1>Realize o Login</h1>
       <label htmlFor="emailInput">Email:</label>
       <input
@@ -35,8 +40,12 @@ const Card = () => {
         onChange={(event) => setEmail(event.target.value)}
       ></input>
       <label htmlFor="passswordInput">Senha:</label>
-      <input id="passswordInput" type="password"></input>
-      <button className="buttonLogin" onClick={() => validateUser(email)}>
+      <input
+        id="passswordInput"
+        value={password}
+        onChange={(event) => setPassword(event.target.value)}
+        type="password"></input>
+      <button className="buttonLogin" onClick={() => validateUser(email, password)}>
         Entrar
       </button>
     </div>
