@@ -1,9 +1,9 @@
 const conta = {
     id: '1',
-    email: 'rob@dio.me',
+    email: 'devdisciplinado@email.com',
     password: 'fullstack',
     name: 'Robson Godoy',
-    balance: 2000.00
+    balance: 20000.00
 }
 
 export const api = new Promise((resolve) => {
