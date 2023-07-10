@@ -19,9 +19,11 @@ function App() {
         <BrowserRouter>
           <Routes>
                   <Route path="/" element={
+                    
             <Layout>
               <Card />
             </Layout>
+            
           }/>
             <Route path="/conta/:id" element= {
                 <Layout>

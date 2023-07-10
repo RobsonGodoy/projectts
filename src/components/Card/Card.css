@@ -1,7 +1,14 @@
+.Cardtop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
 .Card {
     background-color:  #e1f5c4;
     padding: 1rem 0.5rem;
     display: flex;
+    width: 700px;
     flex-direction: column;
     margin: 3rem;
     border-radius: 1rem;

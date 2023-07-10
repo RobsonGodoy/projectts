@@ -4,9 +4,13 @@ import { Header } from "./Header/Header"
 export const Layout = ({children}:any) => {
     return (
         <>
-            <Header/>
-            { children }
-            <Footer/>
+            <div>
+                <Header/>
+                <div>
+                    { children }
+                </div>
+                <Footer/>
+            </div>
         </>
     )
 }

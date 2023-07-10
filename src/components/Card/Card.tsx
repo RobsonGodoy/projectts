@@ -31,23 +31,25 @@ const Card = () => {
   };
 
   return (
-    <div className="Card">
-      <h1>Realize o Login</h1>
-      <label htmlFor="emailInput">Email:</label>
-      <input
-        id="emailInput"
-        value={email}
-        onChange={(event) => setEmail(event.target.value)}
-      ></input>
-      <label htmlFor="passswordInput">Senha:</label>
-      <input
-        id="passswordInput"
-        value={password}
-        onChange={(event) => setPassword(event.target.value)}
-        type="password"></input>
-      <button className="buttonLogin" onClick={() => validateUser(email, password)}>
-        Entrar
-      </button>
+    <div className="Cardtop">
+      <div className="Card">
+        <h1>Realize o Login</h1>
+        <label htmlFor="emailInput">Email:</label>
+        <input
+          id="emailInput"
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
+        ></input>
+        <label htmlFor="passswordInput">Senha:</label>
+        <input
+          id="passswordInput"
+          value={password}
+          onChange={(event) => setPassword(event.target.value)}
+          type="password"></input>
+        <button className="buttonLogin" onClick={() => validateUser(email, password)}>
+          Entrar
+        </button>
+      </div>
     </div>
   );
 };
